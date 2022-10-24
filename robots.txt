@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4001/workspaces/intro2sd-alejandro-perez-buquerin-alu0101324067/sitemap.xml
+Sitemap: https://mmistakes.github.io/workspaces/intro2sd-alejandro-perez-buquerin-alu0101324067/sitemap.xml
