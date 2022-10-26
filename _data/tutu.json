@@ -1,0 +1,9 @@
+{
+    "titulo": "The walking dead",
+    "temporada": "1",
+    "colores": {
+        "alumnos": ["Guillermo, Gian, Marta, Patricia, Kiana, Arturo, Jorge, Alejandro"],
+        "color": ["rojo", "verde", "azul"],
+        "texto": "sección de colores"
+    }
+}
