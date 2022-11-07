@@ -199,7 +199,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  myCollection:
+  music:
     output: true
     permalink: /:collection/:path/
 
@@ -217,10 +217,10 @@ defaults:
       comments: true
       share: true
       related: true
-  # _myCollection
+  # _music
   - scope:
       path: ""
-      type: myCollection
+      type: music
     values:
       layout: single
       author_profile: true
