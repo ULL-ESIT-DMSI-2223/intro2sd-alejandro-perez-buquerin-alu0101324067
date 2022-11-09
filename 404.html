@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Page Not Found - Introducción al Desarrollo de Sistemas</title>
-<meta name="description" content="Page not found. Your pixels are in another canvas.">
+<!-- begin _includes/seo.html --><title>Error 404: Página no encontrada - Introducción al Desarrollo de Sistemas</title>
+<meta name="description" content="Pagina no encontrada, lo que estabas buscando no está aquí">
 
 
   <meta name="author" content="Michael Rose">
@@ -20,11 +20,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Introducción al Desarrollo de Sistemas">
-<meta property="og:title" content="Page Not Found">
+<meta property="og:title" content="Error 404: Página no encontrada">
 <meta property="og:url" content="https://mmistakes.github.io/intro2sd-alejandro-perez-buquerin-alu0101324067/404.html">
 
 
-  <meta property="og:description" content="Page not found. Your pixels are in another canvas.">
+  <meta property="og:description" content="Pagina no encontrada, lo que estabas buscando no está aquí">
 
 
 
@@ -33,8 +33,8 @@
 
 
   <meta name="twitter:site" content="@mmistakes">
-  <meta name="twitter:title" content="Page Not Found">
-  <meta name="twitter:description" content="Page not found. Your pixels are in another canvas.">
+  <meta name="twitter:title" content="Error 404: Página no encontrada">
+  <meta name="twitter:description" content="Pagina no encontrada, lo que estabas buscando no está aquí">
   <meta name="twitter:url" content="https://mmistakes.github.io/intro2sd-alejandro-perez-buquerin-alu0101324067/404.html">
 
   
@@ -290,15 +290,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Page Not Found">
-    <meta itemprop="description" content="Page not found. Your pixels are in another canvas.">
+    <meta itemprop="headline" content="Error 404: Página no encontrada">
+    <meta itemprop="description" content="Pagina no encontrada, lo que estabas buscando no está aquí">
     
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Page Not Found
+          <h1 id="page-title" class="page__title" itemprop="headline">Error 404: Página no encontrada
 </h1>
           
 
@@ -308,7 +308,72 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Sorry, but the page you were trying to view does not exist.</p>
+        <h1 id="no-hemos-encontrado-lo-que-buscabas">No hemos encontrado lo que buscabas</h1>
+
+<div>
+<style>
+img, #quote, #comment-cat {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#author {
+  float: right;
+}
+</style>
+
+
+<div id="comment-cat"></div>
+<div id="cat"></div>
+<br />
+<div id="quote"></div>
+<div id="author"></div>
+
+
+<script type="text/javascript">
+
+/*
+  https://docs.thecatapi.com/ 
+*/
+const URL = 'https://api.thecatapi.com/v1/images/search?size=full';
+
+(async function() {
+  try {
+    
+    // CAT 
+    let divTitle = document.getElementById("comment-cat");
+    
+    let divcat = document.getElementById("cat");
+    let response = await fetch(URL, {
+       headers: {
+       'x-api-key': "56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d"
+       }
+    });
+    let cat = await response.json();
+    // console.log(cat);   
+    let img = document.createElement("img");
+    let title = document.createElement("h2");
+    title.innerText = "Consuélate con un gatito";   
+    divTitle.append(title);
+    img.src = cat[0].url;
+    divcat.appendChild(img);   
+
+    // QUOTE
+    const quoteDiv = document.getElementById("quote");
+    const authorDiv = document.getElementById("author");
+    
+    const quoteRes = await fetch('https://api.quotable.io/random');
+    const data = await quoteRes.json();
+    quoteDiv.innerHTML = `<h2>${data.content}</h2>`;
+    authorDiv.innerHTML = `<h3>—${data.author}</h3>`;
+  }
+  catch(e) { 
+    console.log(e);
+  }
+})();
+</script>
+
+</div>
 
         
       </section>
