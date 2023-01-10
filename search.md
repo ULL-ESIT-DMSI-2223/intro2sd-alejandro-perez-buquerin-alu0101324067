@@ -1,42 +1,42 @@
 ---
-layout: default
-permalink: search
-title: search
-baseurl: mysearch
+layout: error 
+permalink: /search/
+title: Search
 ---
 
 {% capture initSearch %}
 
-<form id="search-form" action="">
-    <label class="label" for="search">BUSQUEDA (acepta expresión regular):</label>
-    <br/>
-    <input 
-        class="input" 
-        id="search" 
-        type="text" 
-        name="search" 
-        autofocus 
-        placeholder="e. g. Promise" 
-        autocomplete="off">
+<h1>Search</h1>
 
-    <ul class="list list--results" id="list">
-    </ul>
+<form id="search-form" action="">
+  <label class="label" for="search">Search term (accepts a regex):</label>
+  <br/>
+  <input class="input" id="search" type="text" name="search" 
+        autofocus 
+        placeholder="e.g. Promise" 
+        autocomplete="off">
+  
+  <ul class="list  list--results" id="list">
+  </ul>
 </form>
 
-<script type="test/javascript" src="{{site.baseurl}}/assets/src/search.js"></script>
+< script type="text/javascript" src="/assets/src/fetch.js"></script>
+< script type="text/javascript" src="/assets/src/search.js"></script>
 
-<script type="test/javascript">
 
-    const search = new JekyllSearch{
-        '{{site.baseurl}}/assets/src/search.json',
-        '#search'
-        '#list'
-        '{{site.baseurl}}
-    };
-    search.init();
+< script type="text/javascript">
 
+  const search = new JekyllSearch(
+    '{{site.url}}/assets/src/search.json',
+    '#search',
+    '#list',
+    '{{site.baseurl}}'
+  );
+  search.init(); 
+  
 </script>
 
+<noscript>Please enable JavaScript to use the search form.</noscript>
 
 {% endcapture %}
 
