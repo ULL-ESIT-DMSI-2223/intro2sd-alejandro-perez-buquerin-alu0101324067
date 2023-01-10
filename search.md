@@ -1,5 +1,5 @@
 ---
-layout: error 
+layout: default 
 permalink: /search/
 title: Search
 ---
