@@ -2,6 +2,7 @@
 layout: default
 permalink: search
 title: search
+baseurl: mysearch
 ---
 
 {% capture initSearch %}
