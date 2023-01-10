@@ -845,7 +845,7 @@
   {
     "title": "search",
     "excerpt": "\n",
-    "content": "{% capture initSearch %}\n\n\n    Search term (accepts a regex):\n    \n    \n\n    \n    \n\n\n\n\n\n\n{% endcapture %}\n\n\n  \n    \n      {{ initSearch\n      lstrip }}\n    \n  \n\n",
+    "content": "{% capture initSearch %}\n\n\n    BUSQUEDA (acepta expresión regular):\n    \n    \n\n    \n    \n\n\n\n\n\n\n{% endcapture %}\n\n\n  \n    \n      {{ initSearch\n      lstrip }}\n    \n  \n\n",
     "url": "/intro2sd-alejandro-perez-buquerin-alu0101324067//search"
   },
   
