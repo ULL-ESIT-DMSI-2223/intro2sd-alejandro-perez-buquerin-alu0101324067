@@ -7,7 +7,7 @@ title: search
 {% capture initSearch %}
 
 <form id="search-form" action="">
-    <label class="label" for="search">Search term (accepts a regex):</label>
+    <label class="label" for="search">BUSQUEDA (acepta expresión regular):</label>
     <br/>
     <input 
         class="input" 
